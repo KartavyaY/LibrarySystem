@@ -4,8 +4,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
-import java.util.List;
-
 @SpringBootApplication
 public class LibrarySystemApplication {
 
@@ -16,9 +14,14 @@ public class LibrarySystemApplication {
 		bookService.setBook(new Books(1,"The Great Gatsby"));
 		bookService.setBook(new Books(2,"Harry Potter"));
 		bookService.setBook(new Books(3,"The Witcher"));
+		bookService.setBook(new Books(4,"The Game of Thrones"));
 
 		bookService.getBooks();
 		bookService.getBook(1);
+		bookService.getBook(2);
+
+		bookService.deleteBook(4);
+		bookService.getBooks();
 	}
 
 }
